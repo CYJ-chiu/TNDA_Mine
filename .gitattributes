@@ -1,0 +1,28 @@
+
+
+# Windows
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Shell scripts should use LF
+*.sh text eol=lf
+
+# Unreal Engine assets
+*.uasset binary
+*.umap   binary
+
+# Unreal generated binary
+*.ubulk  binary
+*.uptnl  binary
+*.uexp   binary
+
+*.h         text eol=crlf
+*.hpp       text eol=crlf
+*.cpp       text eol=crlf
+*.inl       text eol=crlf
+*.Build.cs  text eol=crlf
+*.Target.cs text eol=crlf
+
+# Source tree documentation and collaboration instructions are edited alongside C++ source on Windows.
+Source/** text eol=crlf
