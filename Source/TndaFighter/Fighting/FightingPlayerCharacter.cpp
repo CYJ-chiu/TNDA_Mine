@@ -503,7 +503,7 @@ void AFightingPlayerCharacter::SetupPlayerInputComponent(UInputComponent* Player
 	// 只有 Enhanced Input Component 才能綁定 Input Action；其他元件類型交由父類處理。
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
-		// 使用 Triggered 讓按住輸入時每幀持續更新移動向量。
+		// 使用 Triggered 讓按住輸入時每幀持續更新移動向量。按住 WASD 時的每一幀都持續更新移動向量
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AFightingPlayerCharacter::Move);
 		// Input Action 結束或被觸發條件取消時，立即停止被動推擠，不能依賴 CharacterMovement 已消耗的加速度。
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Completed, this, &AFightingPlayerCharacter::StopMove);
